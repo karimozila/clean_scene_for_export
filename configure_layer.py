@@ -52,3 +52,9 @@ def houdini_fix(usd_temp_path , houdini_save_path ):
     usd_rop_excute = usd_rop.parm("execute")
     usd_rop_excute.pressButton()
 
+    
+import subprocess
+cmdTools = '"C:/Program Files/Side Effects Software/Houdini 18.5.408/bin/hython2.7.exe"'
+with open ("C:\Users\Windows\Google Drive\scripts\houdini\configure_layer.py" , "r" ) as f :
+    script = f.read()
+subprocess.call(cmdTools+" "+ script)
